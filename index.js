@@ -1,6 +1,9 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 
+const cors = require('cors');
+
+
 //create express app
 const app = express()
 
@@ -12,7 +15,13 @@ app.use(bodyParser.urlencoded({extended:false}))
 //parse request data content type application/json
 app.use(bodyParser.json())
 
-//root route define
+app.use(function(req,res,next){
+    res.header('Access-Control-Allow-Origin','*')
+    res.header('Access-Control-Allow-Headers','Origin, X-Requested-With,Content-Type,Accept')
+    next()
+})
+
+//root route define  
 app.get('/',(req,res)=>{
     res.send('Hello World')
 })
