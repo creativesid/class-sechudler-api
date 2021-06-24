@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "af965d2d-b319-448b-bd18-b3676f95b583",
+		"name": "Class",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Classes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/class",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"class"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Classes of a particular teacher",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "teacher",
+							"value": "GHI",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2021-06-22",
+							"type": "text"
+						},
+						{
+							"key": "timefrom",
+							"value": "14:44:49",
+							"type": "text"
+						},
+						{
+							"key": "timeto",
+							"value": "16:44:49",
+							"type": "text"
+						},
+						{
+							"key": "topic",
+							"value": "CSS",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/class/abc",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"class",
+						"abc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new Class",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "teacher",
+							"value": "GHI",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2021-06-22",
+							"type": "text"
+						},
+						{
+							"key": "timefrom",
+							"value": "14:44:49",
+							"type": "text"
+						},
+						{
+							"key": "timeto",
+							"value": "16:44:49",
+							"type": "text"
+						},
+						{
+							"key": "topic",
+							"value": "CSS",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/class",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"class"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Class",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "teacher",
+							"value": "GHI",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2021-06-22",
+							"type": "text"
+						},
+						{
+							"key": "timefrom",
+							"value": "14:44:49",
+							"type": "text"
+						},
+						{
+							"key": "timeto",
+							"value": "16:44:49",
+							"type": "text"
+						},
+						{
+							"key": "topic",
+							"value": "CSS",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/v1/class/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"class",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
